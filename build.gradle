@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+// 兼容 java 1.8 版本
+sourceCompatibility = '1.8'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:2.2.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:2.2.1.RELEASE'
+    compile 'org.springframework.data:spring-data-releasetrain:Moore-SR4'
+    compile 'mysql:mysql-connector-java:8.0.18'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+    compile 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0'
+    compile 'org.springframework.boot:spring-boot-starter-test:2.2.1.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
